@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row">
+    <form asp-controller="Home" asp-action="IndexSearch" method="post">
+        <div class="row">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Nome" name="fname" value="@ViewBag.FName">
+            </div>
+            <div class="col">
+                @Html.DropDownList("race", (IEnumerable<SelectListItem>)ViewBag.RaceList, ViewBag.Race, new { @class = "form-control" })
+            </div>
+            <div class="col">
+                <input type="submit" value="Buscar" class="btn btn-primary" />
+            </div>
+        </div>
+    </form>
+</div>
+<br/>
+<div class="row">
+    <table class="table table-hover table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Imagem</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Ataque</th>
+                <th scope="col">Defesa</th>
+                <th scope="col">Level</th>
+                <th scope="col">Mais Infos</th>
+            </tr>
+        </thead>
+        @foreach (var item in Model)
+        {
+            <tbody>
+                <tr>
+                    <td>@item.Id</td>
+                    <td><img src="@item.CardImages[0].ImageUrl" width="268" height="391" /></td>
+                    <td>@item.Name</td>
+                    <td>@item.Atk</td>
+                    <td>@item.Def</td>
+                    <td>@item.Level</td>
+                    <td><a href="@item.YgoprodeckUrl" target="_blank">Clique aqui</a></td>
+                </tr>
+            </tbody>
+        }
+    </table>
+</div>

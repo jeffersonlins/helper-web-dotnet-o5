@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "helper-web-dotnet-o5", "helper-web-dotnet-o5\helper-web-dotnet-o5.csproj", "{584DCD5C-A35D-4AF5-A9CE-A60BD680E880}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{584DCD5C-A35D-4AF5-A9CE-A60BD680E880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{584DCD5C-A35D-4AF5-A9CE-A60BD680E880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{584DCD5C-A35D-4AF5-A9CE-A60BD680E880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{584DCD5C-A35D-4AF5-A9CE-A60BD680E880}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {470E71CA-A43D-418B-AAA1-571B98FCDA6C}
+	EndGlobalSection
+EndGlobal
