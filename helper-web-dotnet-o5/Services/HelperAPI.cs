@@ -25,5 +25,19 @@ namespace helper_web_dotnet_o5.Services
 
             return retorno;
         }
+
+        public async Task<T> MetodoGETRandom<T>()
+        {
+            HttpClient httpClient = new();
+            var URI = $"{_EndPoint}/GetRandom";
+
+            var response = await httpClient.GetAsync(URI);
+
+            string responseContent = await response.Content.ReadAsStringAsync();
+
+            var retorno = JsonConvert.DeserializeObject<T>(responseContent);
+
+            return retorno;
+        }
     }
 }

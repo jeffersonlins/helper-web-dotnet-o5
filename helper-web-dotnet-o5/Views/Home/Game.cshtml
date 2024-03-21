@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Random";
+}
+
+<div class="row">
+    <table class="table table-hover table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" align="center">Jogador 1</th>
+                <th scope="col" align="center">Jogador 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td align="center"><img src="@ViewBag.Result1.CardImages[0].ImageUrl" width="268" height="391" /></td>
+                <td align="center"><img src="@ViewBag.Result2.CardImages[0].ImageUrl" width="268" height="391" /></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

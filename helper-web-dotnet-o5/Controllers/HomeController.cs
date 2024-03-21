@@ -75,6 +75,25 @@ namespace helper_web_dotnet_o5.Controllers
             }
         }
 
+        public IActionResult Game()
+        {
+            var api = new HelperAPI(ENDPOINT);
+            var result1 = api.MetodoGETRandom<Card>().Result;
+            var result2 = api.MetodoGETRandom<Card>().Result;
+
+            ViewBag.Result1 = result1;
+            ViewBag.Result2 = result2;
+
+            if (result1 is not null && result2 is not null)
+            {
+                return View();
+            }
+            else
+            {
+                return View("RandomEmpty");
+            }
+        }
+
         public List<SelectListItem> getRaceList()
         {
             List<SelectListItem> RaceList = new List<SelectListItem>();
